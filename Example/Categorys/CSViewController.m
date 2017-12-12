@@ -8,7 +8,9 @@
 
 #import "CSViewController.h"
 
+
 @interface CSViewController ()
+
 
 @end
 
@@ -20,6 +22,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -27,3 +34,5 @@
 }
 
 @end
+
+

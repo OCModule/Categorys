@@ -17,5 +17,4 @@ typedef void(^ObservingBlock)(id observedObject, NSString *observedKey, id oldVa
 
 - (void)cs_removeObserver:(NSObject *)observer forKey:(NSString *)key;
 
-
 @end

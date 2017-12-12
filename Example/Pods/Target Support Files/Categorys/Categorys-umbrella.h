@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "NSObject+Block.h"
+#import "NSObject+KVO.h"
+#import "NSObject+NotNull.h"
+#import "NSObject+Observer.h"
 
 FOUNDATION_EXPORT double CategorysVersionNumber;
 FOUNDATION_EXPORT const unsigned char CategorysVersionString[];
