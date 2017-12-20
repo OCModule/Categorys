@@ -23,6 +23,14 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9DA769BC399A739267650CF4 /* Pods_Categorys_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410F23FF3EF0B09E0C5A7AC /* Pods_Categorys_Example.framework */; };
+		AA26626F1FE4279A007F52B5 /* CSNSMutableArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA26626E1FE4279A007F52B5 /* CSNSMutableArrayTests.m */; };
+		AA2662711FE4BBE3007F52B5 /* CSNSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662701FE4BBE3007F52B5 /* CSNSDictionaryTests.m */; };
+		AA2662731FE4C102007F52B5 /* CSNSMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662721FE4C102007F52B5 /* CSNSMutableDictionaryTests.m */; };
+		AA2662751FE4DD08007F52B5 /* CSNSNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662741FE4DD08007F52B5 /* CSNSNumberTests.m */; };
+		AA2662771FE4E2D4007F52B5 /* CSNSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662761FE4E2D4007F52B5 /* CSNSStringTests.m */; };
+		AA2662791FE4E586007F52B5 /* CSNSMutableStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662781FE4E586007F52B5 /* CSNSMutableStringTests.m */; };
+		AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */; };
+		AA353B641FE4195300FBCFFD /* CSNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */; };
 		AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */; };
 		E75BB87C662F398F1B8E379E /* Pods_Categorys_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +72,15 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Categorys_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A3235934D35A1736E3C665 /* Pods-Categorys_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Categorys_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Categorys_Tests/Pods-Categorys_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA26626E1FE4279A007F52B5 /* CSNSMutableArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSMutableArrayTests.m; sourceTree = "<group>"; };
+		AA2662701FE4BBE3007F52B5 /* CSNSDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSDictionaryTests.m; sourceTree = "<group>"; };
+		AA2662721FE4C102007F52B5 /* CSNSMutableDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSMutableDictionaryTests.m; sourceTree = "<group>"; };
+		AA2662741FE4DD08007F52B5 /* CSNSNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSNumberTests.m; sourceTree = "<group>"; };
+		AA2662761FE4E2D4007F52B5 /* CSNSStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSStringTests.m; sourceTree = "<group>"; };
+		AA2662781FE4E586007F52B5 /* CSNSMutableStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSMutableStringTests.m; sourceTree = "<group>"; };
+		AA353B5A1FE376A500FBCFFD /* CSSafeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSafeTableViewController.h; sourceTree = "<group>"; };
+		AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSafeTableViewController.m; sourceTree = "<group>"; };
+		AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSArrayTests.m; sourceTree = "<group>"; };
 		AA70DBB71FDFCC23007752B8 /* CSKVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSKVOController.h; sourceTree = "<group>"; };
 		AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSKVOControlle.m; sourceTree = "<group>"; };
 		BBAD22D605EBEE2326C75B7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -142,6 +159,8 @@
 				6003F5A6195388D20070C39A /* CSViewController.m */,
 				AA70DBB71FDFCC23007752B8 /* CSKVOController.h */,
 				AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */,
+				AA353B5A1FE376A500FBCFFD /* CSSafeTableViewController.h */,
+				AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -164,6 +183,13 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AA26626E1FE4279A007F52B5 /* CSNSMutableArrayTests.m */,
+				AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */,
+				AA2662701FE4BBE3007F52B5 /* CSNSDictionaryTests.m */,
+				AA2662721FE4C102007F52B5 /* CSNSMutableDictionaryTests.m */,
+				AA2662741FE4DD08007F52B5 /* CSNSNumberTests.m */,
+				AA2662761FE4E2D4007F52B5 /* CSNSStringTests.m */,
+				AA2662781FE4E586007F52B5 /* CSNSMutableStringTests.m */,
 				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
@@ -391,10 +417,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Categorys_Example/Pods-Categorys_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Categorys/Categorys.framework",
+				"${BUILT_PRODUCTS_DIR}/SafeNSObject/SafeNSObject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Categorys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SafeNSObject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -411,6 +439,7 @@
 				6003F59E195388D20070C39A /* CSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */,
 				AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +448,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2662711FE4BBE3007F52B5 /* CSNSDictionaryTests.m in Sources */,
+				AA353B641FE4195300FBCFFD /* CSNSArrayTests.m in Sources */,
+				AA26626F1FE4279A007F52B5 /* CSNSMutableArrayTests.m in Sources */,
+				AA2662771FE4E2D4007F52B5 /* CSNSStringTests.m in Sources */,
+				AA2662751FE4DD08007F52B5 /* CSNSNumberTests.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				AA2662791FE4E586007F52B5 /* CSNSMutableStringTests.m in Sources */,
+				AA2662731FE4C102007F52B5 /* CSNSMutableDictionaryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

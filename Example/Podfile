@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'Categorys_Example' do
   pod 'Categorys', :path => '../'
+  pod 'SafeNSObject'
 
   target 'Categorys_Tests' do
     inherit! :search_paths
