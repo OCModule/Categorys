@@ -31,15 +31,21 @@
 //        NSLog(@"🌹--🇺🇸 ==%@", strongself);
 //    } andDelay:5];
     
-//    [self performSelector:@selector(ok) withObject:nil withObject:nil];
-    id ob = [NSObject performIfResponds:self selector:@selector(sum:arg:arg:) object:@1 object:@2 object:@3];
+    id ob = [self performSelector:@selector(sum:arg:arg:) withObjects:@[@2, @3, @5]];
     NSLog(@"🌹🇺🇸%@", ob);
 }
+
+//- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {
+////    NSInteger temp = [arg1 integerValue] + [arg2 integerValue] + [arg3 integerValue];
+////    return [NSNumber numberWithInteger:temp];
+//    return arg1 + arg2 + arg3;
+//}
 
 - (NSNumber *)sum:(NSNumber *)arg1 arg:(NSNumber *)arg2 arg:(NSNumber *)arg3 {
     NSInteger temp = [arg1 integerValue] + [arg2 integerValue] + [arg3 integerValue];
     return [NSNumber numberWithInteger:temp];
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 }
