@@ -9,6 +9,7 @@
 #import "CSViewController.h"
 #import <Categorys/NSObject+Block.h>
 #import <Categorys/NSObject+PerformIfResponds.h>
+#import "CSVeiw.h"
 
 
 @interface CSViewController ()
@@ -30,6 +31,7 @@
 //        __strong typeof(self) strongself = weakself;
 //        NSLog(@"🌹--🇺🇸 ==%@", strongself);
 //    } andDelay:5];
+    UIView *test = [[CSVeiw alloc] init];
     
     id ob = [self performSelector:@selector(sum:arg:arg:) withObjects:@[@2, @3, @5]];
     NSLog(@"🌹🇺🇸%@", ob);

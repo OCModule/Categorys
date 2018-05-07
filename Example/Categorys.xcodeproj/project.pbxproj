@@ -31,6 +31,8 @@
 		AA2662791FE4E586007F52B5 /* CSNSMutableStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662781FE4E586007F52B5 /* CSNSMutableStringTests.m */; };
 		AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */; };
 		AA353B641FE4195300FBCFFD /* CSNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */; };
+		AA385171209C3E1300861F0F /* CSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385170209C3E1300861F0F /* CSButton.m */; };
+		AA385174209C3E3B00861F0F /* CSVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385173209C3E3B00861F0F /* CSVeiw.m */; };
 		AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */; };
 		E75BB87C662F398F1B8E379E /* Pods_Categorys_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,10 @@
 		AA353B5A1FE376A500FBCFFD /* CSSafeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSafeTableViewController.h; sourceTree = "<group>"; };
 		AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSafeTableViewController.m; sourceTree = "<group>"; };
 		AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSArrayTests.m; sourceTree = "<group>"; };
+		AA38516F209C3E1300861F0F /* CSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSButton.h; sourceTree = "<group>"; };
+		AA385170209C3E1300861F0F /* CSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSButton.m; sourceTree = "<group>"; };
+		AA385172209C3E3B00861F0F /* CSVeiw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVeiw.h; sourceTree = "<group>"; };
+		AA385173209C3E3B00861F0F /* CSVeiw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSVeiw.m; sourceTree = "<group>"; };
 		AA70DBB71FDFCC23007752B8 /* CSKVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSKVOController.h; sourceTree = "<group>"; };
 		AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSKVOControlle.m; sourceTree = "<group>"; };
 		BBAD22D605EBEE2326C75B7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -164,6 +170,10 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				AA38516F209C3E1300861F0F /* CSButton.h */,
+				AA385170209C3E1300861F0F /* CSButton.m */,
+				AA385172209C3E3B00861F0F /* CSVeiw.h */,
+				AA385173209C3E3B00861F0F /* CSVeiw.m */,
 			);
 			name = "Example for Categorys";
 			path = Categorys;
@@ -439,6 +449,8 @@
 				6003F59E195388D20070C39A /* CSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				AA385171209C3E1300861F0F /* CSButton.m in Sources */,
+				AA385174209C3E3B00861F0F /* CSVeiw.m in Sources */,
 				AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */,
 				AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */,
 			);
