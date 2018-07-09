@@ -33,8 +33,9 @@
 //    } andDelay:5];
     UIView *test = [[CSVeiw alloc] init];
     
-    id ob = [self performSelector:@selector(sum:arg:arg:) withObjects:@[@2, @3, @5]];
-    NSLog(@"🌹🇺🇸%@", ob);
+//    id ob = [self performSelector:@selector(sum:arg:arg:) withObjects:@[@2, @3, @5]];
+    id obj = [self perform:@selector(sum:arg:arg:) withObject:@2, @3, @4];
+    NSLog(@"🌹🇺🇸%@", obj);
 }
 
 //- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {

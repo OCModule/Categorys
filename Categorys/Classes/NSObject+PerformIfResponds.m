@@ -24,9 +24,9 @@
     if (![self respondsToSelector:selector]) {
         return nil;
     }
-    NSMethodSignature *sig = [self methodSignatureForSelector:selector];
-    if (sig) {
-        NSInvocation *invo = [NSInvocation invocationWithMethodSignature:sig];
+    NSMethodSignature *signature = [self methodSignatureForSelector:selector];
+    if (signature) {
+        NSInvocation *invo = [NSInvocation invocationWithMethodSignature:signature];
         [invo setTarget:self];
         [invo setSelector:selector];
         for (NSInteger i=0; i < objects.count; i++) {
@@ -34,7 +34,7 @@
             [invo setArgument:&obj atIndex:i + 2];
         }
         [invo invoke];
-        if (sig.methodReturnLength) {
+        if (signature.methodReturnLength) {
             id anObject;
             [invo getReturnValue:&anObject];
             return anObject;
