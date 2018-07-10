@@ -10,13 +10,13 @@
 #endif
 #endif
 
-#import "NSArray+weak.h"
 #import "NSMutableArray+weak.h"
 #import "NSObject+Block.h"
 #import "NSObject+KVO.h"
 #import "NSObject+NotNull.h"
 #import "NSObject+Observer.h"
 #import "NSObject+PerformIfResponds.h"
+#import "UIControl+click.h"
 #import "UIResponder+Router.h"
 
 FOUNDATION_EXPORT double CategorysVersionNumber;
