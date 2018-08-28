@@ -7,6 +7,7 @@
 //
 
 #import "CSSafeTableViewController.h"
+#import <Categorys/UIControl+Block.h>
 
 @interface CSSafeTableViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[[UIButton alloc] init] touchUpInside:^{
+        
+    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
