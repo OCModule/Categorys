@@ -3,7 +3,7 @@
 //  Categorys
 //
 //  Created by steve on 09/07/2018.
-//
+//  Avoid repeat click
 
 #import <UIKit/UIKit.h>
 
