@@ -21,6 +21,8 @@ block();                                                                        
 }
 
 @implementation UIControl (Block)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
 
 UIControlEventImpl(touchDown, TouchDown);
 UIControlEventImpl(touchDownRepeat, TouchDownRepeat);
@@ -37,4 +39,5 @@ UIControlEventImpl(editingChanged, EditingChanged);
 UIControlEventImpl(editingDidEnd, EditingDidEnd);
 UIControlEventImpl(editingDidEndOnExit, EditingDidEndOnExit);
 
+#pragma clang diagnostic pop
 @end
