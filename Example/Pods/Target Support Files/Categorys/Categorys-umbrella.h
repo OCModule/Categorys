@@ -13,6 +13,7 @@
 #import "NSMutableArray+weak.h"
 #import "NSObject+AssociatedObject.h"
 #import "NSObject+Block.h"
+#import "NSObject+HRNSwizzling.h"
 #import "NSObject+KVO.h"
 #import "NSObject+NotNull.h"
 #import "NSObject+Observer.h"

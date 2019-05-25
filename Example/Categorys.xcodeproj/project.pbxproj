@@ -23,6 +23,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9DA769BC399A739267650CF4 /* Pods_Categorys_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410F23FF3EF0B09E0C5A7AC /* Pods_Categorys_Example.framework */; };
+		AA14E30C22993D6300F340A2 /* UIViewController+hook1.m in Sources */ = {isa = PBXBuildFile; fileRef = AA14E30B22993D6300F340A2 /* UIViewController+hook1.m */; };
+		AA14E30F22993D7500F340A2 /* UIViewController+hook2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA14E30E22993D7500F340A2 /* UIViewController+hook2.m */; };
 		AA26626F1FE4279A007F52B5 /* CSNSMutableArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA26626E1FE4279A007F52B5 /* CSNSMutableArrayTests.m */; };
 		AA2662711FE4BBE3007F52B5 /* CSNSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662701FE4BBE3007F52B5 /* CSNSDictionaryTests.m */; };
 		AA2662731FE4C102007F52B5 /* CSNSMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662721FE4C102007F52B5 /* CSNSMutableDictionaryTests.m */; };
@@ -74,6 +76,10 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Categorys_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A3235934D35A1736E3C665 /* Pods-Categorys_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Categorys_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Categorys_Tests/Pods-Categorys_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA14E30A22993D6300F340A2 /* UIViewController+hook1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+hook1.h"; sourceTree = "<group>"; };
+		AA14E30B22993D6300F340A2 /* UIViewController+hook1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+hook1.m"; sourceTree = "<group>"; };
+		AA14E30D22993D7500F340A2 /* UIViewController+hook2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+hook2.h"; sourceTree = "<group>"; };
+		AA14E30E22993D7500F340A2 /* UIViewController+hook2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+hook2.m"; sourceTree = "<group>"; };
 		AA26626E1FE4279A007F52B5 /* CSNSMutableArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSMutableArrayTests.m; sourceTree = "<group>"; };
 		AA2662701FE4BBE3007F52B5 /* CSNSDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSDictionaryTests.m; sourceTree = "<group>"; };
 		AA2662721FE4C102007F52B5 /* CSNSMutableDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSMutableDictionaryTests.m; sourceTree = "<group>"; };
@@ -174,6 +180,10 @@
 				AA385170209C3E1300861F0F /* CSButton.m */,
 				AA385172209C3E3B00861F0F /* CSVeiw.h */,
 				AA385173209C3E3B00861F0F /* CSVeiw.m */,
+				AA14E30A22993D6300F340A2 /* UIViewController+hook1.h */,
+				AA14E30B22993D6300F340A2 /* UIViewController+hook1.m */,
+				AA14E30D22993D7500F340A2 /* UIViewController+hook2.h */,
+				AA14E30E22993D7500F340A2 /* UIViewController+hook2.m */,
 			);
 			name = "Example for Categorys";
 			path = Categorys;
@@ -298,6 +308,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -401,8 +412,10 @@
 				6003F59E195388D20070C39A /* CSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				AA14E30F22993D7500F340A2 /* UIViewController+hook2.m in Sources */,
 				AA385171209C3E1300861F0F /* CSButton.m in Sources */,
 				AA385174209C3E3B00861F0F /* CSVeiw.m in Sources */,
+				AA14E30C22993D6300F340A2 /* UIViewController+hook1.m in Sources */,
 				AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */,
 				AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */,
 			);

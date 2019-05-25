@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CSViewController.h"
 
-@interface CSKVOController : UITableViewController
+@interface CSKVOController : CSViewController
 
 @end
