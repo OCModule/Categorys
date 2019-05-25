@@ -9,7 +9,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef IMP _Nullable  * IMPPointer;
 
 @interface NSObject (HRNSwizzling)
 
