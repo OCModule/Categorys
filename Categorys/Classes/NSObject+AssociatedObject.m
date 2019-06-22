@@ -74,6 +74,7 @@ static NSString *DEALLOC_BLOCK_KEY = @"DEALLOC_BLOCK_KEY";
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+// 这个方法会覆盖 系统 的 dealloc 从 NSObject 而引起无法释放的问题
 - (void)dealloc {
     if (self.deallocBlock) {
         SEL key = self.deallocBlock();
