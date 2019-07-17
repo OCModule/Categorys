@@ -21,6 +21,14 @@
     [[[UIButton alloc] init] touchUpInside:^{
         
     }];
+//    [self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>];
+////    [self.navigationController popViewControllerAnimated:<#(BOOL)#>];
+//    [self presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:^{
+//        <#code#>
+//    }];
+    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popToViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>];
+//    [self.navigationController popToRootViewControllerAnimated:<#(BOOL)#>];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
