@@ -61,9 +61,12 @@
     imageView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:imageView];
     UIImage *image = [UIImage imageNamed:@"image"];
-    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
+//    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
+//    CGInterpolationQuality
+    imageView.image = [image resizedImage:imageView.bounds.size interpolationQuality:kCGInterpolationHigh];
     
-    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(16, 350, width, height)];
+    
+    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(16, 360, width, height)];
     imageView1.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:imageView1];
     UIImage *image1 = [UIImage imageNamed:@"image"];
