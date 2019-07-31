@@ -14,7 +14,7 @@
 {
     // Override point for customization after application launch.
     
-    [@[@"1", @"2", @"3"] objectAtIndex:10];
+//    [@[@"1", @"2", @"3"] objectAtIndex:10];
     return YES;
 }
 

@@ -20,6 +20,7 @@
 #import "NSObject+PerformIfResponds.h"
 #import "UIControl+Block.h"
 #import "UIControl+click.h"
+#import "UIImage+Resize.h"
 #import "UINavigationController+Extend.h"
 #import "UIResponder+Router.h"
 
