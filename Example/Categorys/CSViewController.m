@@ -64,16 +64,18 @@
 //    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
     
 //    CGInterpolationQuality
-//    imageView.image = [self imageWithImage:image scaledToSize:imageView.bounds.size];
-    imageView.image = [self imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
+    imageView.image = [self imageWithImage:image scaledToSize:imageView.bounds.size];
+//    imageView.image = [self imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
+//    imageView.image = [self imageWithImage:image aspectRatio:imageView.bounds.size];
     
     
     UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(16, 360, width, height)];
     imageView1.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:imageView1];
     UIImage *image1 = [UIImage imageNamed:@"image"];
-    imageView1.contentMode = UIViewContentModeScaleAspectFill;
-    imageView1.image = image1;
+//    imageView1.contentMode = UIViewContentModeScaleAspectFill;
+    
+    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
 }
 
 //- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {
@@ -99,8 +101,7 @@
     [super viewDidAppear:animated];
 }
 
-- (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
-{
+- (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {
     
     CGSize imageSize = image.size;
     CGFloat width = imageSize.width;
@@ -135,8 +136,7 @@
         }
     }
     // Create a graphics image context
-//    UIGraphicsBeginImageContext(newSize);
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 1.0);
+    UIGraphicsBeginImageContextWithOptions(newSize, YES, 0.0);
     
     // Tell the old image to draw in this new context, with the desired
     // new size
@@ -152,8 +152,7 @@
     return newImage;
 }
 
-- (UIImage *)imageWithImage:(UIImage*)sourceImage scaledToSizeWithSameAspectRatio:(CGSize)targetSize;
-{
+- (UIImage *)imageWithImage:(UIImage*)sourceImage scaledToSizeWithSameAspectRatio:(CGSize)targetSize {
     CGSize imageSize = sourceImage.size;
     CGFloat width = imageSize.width;
     CGFloat height = imageSize.height;
@@ -192,11 +191,12 @@
     CGColorSpaceRef colorSpaceInfo = CGImageGetColorSpace(imageRef);
     
     if (bitmapInfo == kCGImageAlphaNone) {
-        bitmapInfo = kCGImageAlphaNoneSkipLast;
+        bitmapInfo = (CGBitmapInfo)kCGImageAlphaNoneSkipLast;
     }
     
     CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
-    
+    // Set the interpolation quality of `context' to `quality'
+    CGContextSetInterpolationQuality(bitmap, kCGInterpolationHigh);
     CGContextDrawImage(bitmap, CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight), imageRef);
     CGImageRef ref = CGBitmapContextCreateImage(bitmap);
     UIImage* newImage = [UIImage imageWithCGImage:ref];
@@ -206,6 +206,7 @@
     
     return newImage;
 }
+
 
 @end
 
