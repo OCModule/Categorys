@@ -17,10 +17,47 @@
 @end
 
 @implementation UIImage (Resize)
-
 // Resize any image by size quality
-- (UIImage *)scaledToSize:(CGSize)newSize {
+- (UIImage *)resized:(CGSize)newSize {
+    return [self resized:newSize interpolationQuality:kCGInterpolationHigh];
+}
+
+- (UIImage *)resized:(CGSize)newSize priority: (IMGPriorityStyle)priorityStyle {
+    return [self resized:newSize
+                priority:priorityStyle
+    interpolationQuality:kCGInterpolationHigh];
+}
+
+- (UIImage *)resized:(CGSize)newSize
+interpolationQuality:(CGInterpolationQuality)quality {
+    return [self resized:newSize
+                priority:IMGPriorityDefault
+    interpolationQuality:quality];
+}
+
+- (UIImage *)resized:(CGSize)newSize
+            priority: (IMGPriorityStyle)priorityStyle
+interpolationQuality:(CGInterpolationQuality)quality {
+    // Create a graphics image context
+    // See: https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_context/dq_context.html#//apple_ref/doc/uid/TP30001066-CH203-TPXREF101
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(context, quality);
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [self drawInRect:[self rectWithPriority:priorityStyle
+                                       size:newSize]];
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    // End the context
+    UIGraphicsEndImageContext();
+    // Return the new image.
+    return newImage;
+}
+
+- (CGRect)rectWithPriority: (IMGPriorityStyle)priorityStyle
+                      size: (CGSize)newSize {
     CGSize imageSize = self.size;
     CGFloat width = imageSize.width;
     CGFloat height = imageSize.height;
@@ -34,41 +71,47 @@
     if (CGSizeEqualToSize(imageSize, newSize) == NO) {
         CGFloat widthFactor = targetWidth / width;
         CGFloat heightFactor = targetHeight / height;
-        
         if (widthFactor > heightFactor) {
             scaleFactor = widthFactor; // scale to fit height
         }
         else {
             scaleFactor = heightFactor; // scale to fit width
         }
-        
         scaledWidth  = width * scaleFactor;
         scaledHeight = height * scaleFactor;
-        
         // center the image
         if (widthFactor > heightFactor) {
-            thumbnailPoint.y = (targetHeight - scaledHeight);
-        }
-        else if (widthFactor < heightFactor) {
-            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+            switch (priorityStyle) {
+                case IMGPriorityTopBottom:
+                    thumbnailPoint.y = 0;
+                    break;
+                case IMGPriorityBottomTop:
+                    thumbnailPoint.y = (targetHeight - scaledHeight);
+                    break;
+                default:
+                    thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+                    break;
+            }
+            
+        } else if (widthFactor < heightFactor) {
+            switch (priorityStyle) {
+                case IMGPriorityLeftRight:
+                    thumbnailPoint.x = 0;
+                    break;
+                case IMGPriorityRightLeft:
+                    thumbnailPoint.x = (targetWidth - scaledWidth);
+                    break;
+                default:
+                    thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+                    break;
+            }
         }
     }
-    // Create a graphics image context
-    // See: https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_context/dq_context.html#//apple_ref/doc/uid/TP30001066-CH203-TPXREF101
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    
-    // Tell the old image to draw in this new context, with the desired
-    // new size
-    [self drawInRect:CGRectMake(thumbnailPoint.x,thumbnailPoint.y,scaledWidth,scaledHeight)];
-    
-    // Get the new image from the context
-    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // End the context
-    UIGraphicsEndImageContext();
-    
-    // Return the new image.
-    return newImage;
+    CGRect drawRect = CGRectMake(thumbnailPoint.x,
+                                 thumbnailPoint.y,
+                                 scaledWidth,
+                                 scaledHeight);
+    return drawRect;
 }
 
 // Returns a copy of this image that is cropped to the given bounds.

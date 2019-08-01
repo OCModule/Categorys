@@ -21,10 +21,12 @@
 #import "UIControl+Block.h"
 #import "UIControl+click.h"
 #import "UIImage+Alpha.h"
+#import "UIImage+Color.h"
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
 #import "UINavigationController+Extend.h"
 #import "UIResponder+Router.h"
+#import "UIView+Extend.h"
 
 FOUNDATION_EXPORT double CategorysVersionNumber;
 FOUNDATION_EXPORT const unsigned char CategorysVersionString[];

@@ -4,10 +4,27 @@
 // No warranty is expressed or implied.
 
 // Extends the UIImage class to support resizing/cropping
+
+typedef NS_ENUM(NSUInteger, IMGPriorityStyle) {
+    IMGPriorityDefault,
+    IMGPriorityTopBottom,
+    IMGPriorityBottomTop,
+    IMGPriorityLeftRight,
+    IMGPriorityRightLeft,
+};
+
 @interface UIImage (Resize)
 
 // Resize any image by size quality
-- (UIImage *)scaledToSize:(CGSize)newSize;
+- (UIImage *)resized:(CGSize)newSize;
+//UIViewContentModeScaleAspectFill,
+//UIViewContentModeBottom// contents scaled to fill with fixed aspect. some portion of content may be clipped.
+- (UIImage *)resized:(CGSize)newSize priority: (IMGPriorityStyle)priorityStyle;
+
+- (UIImage *)resized:(CGSize)newSize
+     interpolationQuality:(CGInterpolationQuality)quality;
+
+
 - (UIImage *)croppedImage:(CGRect)bounds;
 - (UIImage *)thumbnailImage:(NSInteger)thumbnailSize
           transparentBorder:(NSUInteger)borderSize

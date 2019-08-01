@@ -64,7 +64,7 @@
 //    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
     
 //    CGInterpolationQuality
-    imageView.image = [image scaledToSize: imageView.bounds.size];
+    imageView.image = [image resized: imageView.bounds.size priority:IMGPriorityBottomTop];
 //    imageView.image = [self imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
 //    imageView.image = [self imageWithImage:image aspectRatio:imageView.bounds.size];
     
