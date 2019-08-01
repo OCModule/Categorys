@@ -64,7 +64,7 @@
 //    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
     
 //    CGInterpolationQuality
-    imageView.image = [self imageWithImage:image scaledToSize:imageView.bounds.size];
+    imageView.image = [image scaledToSize: imageView.bounds.size];
 //    imageView.image = [self imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
 //    imageView.image = [self imageWithImage:image aspectRatio:imageView.bounds.size];
     
@@ -75,7 +75,8 @@
     UIImage *image1 = [UIImage imageNamed:@"image"];
 //    imageView1.contentMode = UIViewContentModeScaleAspectFill;
     
-    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
+//    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
+    imageView1.image = [image1 resizedImage:imageView1.bounds.size interpolationQuality:kCGInterpolationHigh];
 }
 
 //- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {
@@ -101,57 +102,7 @@
     [super viewDidAppear:animated];
 }
 
-- (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {
-    
-    CGSize imageSize = image.size;
-    CGFloat width = imageSize.width;
-    CGFloat height = imageSize.height;
-    CGFloat targetWidth = newSize.width;
-    CGFloat targetHeight = newSize.height;
-    CGFloat scaleFactor = 0.0;
-    CGFloat scaledWidth = targetWidth;
-    CGFloat scaledHeight = targetHeight;
-    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
-    
-    if (CGSizeEqualToSize(imageSize, newSize) == NO) {
-        CGFloat widthFactor = targetWidth / width;
-        CGFloat heightFactor = targetHeight / height;
-        
-        if (widthFactor > heightFactor) {
-            scaleFactor = widthFactor; // scale to fit height
-        }
-        else {
-            scaleFactor = heightFactor; // scale to fit width
-        }
-        
-        scaledWidth  = width * scaleFactor;
-        scaledHeight = height * scaleFactor;
-        
-        // center the image
-        if (widthFactor > heightFactor) {
-            thumbnailPoint.y = (targetHeight - scaledHeight);
-        }
-        else if (widthFactor < heightFactor) {
-            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
-        }
-    }
-    // Create a graphics image context
-    UIGraphicsBeginImageContextWithOptions(newSize, YES, 0.0);
-    
-    // Tell the old image to draw in this new context, with the desired
-    // new size
-    [image drawInRect:CGRectMake(thumbnailPoint.x,thumbnailPoint.y,scaledWidth,scaledHeight)];
-    
-    // Get the new image from the context
-    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // End the context
-    UIGraphicsEndImageContext();
-    
-    // Return the new image.
-    return newImage;
-}
-
+/// not clear 图片会失真
 - (UIImage *)imageWithImage:(UIImage*)sourceImage scaledToSizeWithSameAspectRatio:(CGSize)targetSize {
     CGSize imageSize = sourceImage.size;
     CGFloat width = imageSize.width;
@@ -189,12 +140,14 @@
     CGImageRef imageRef = [sourceImage CGImage];
     CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
     CGColorSpaceRef colorSpaceInfo = CGImageGetColorSpace(imageRef);
-    
+
     if (bitmapInfo == kCGImageAlphaNone) {
         bitmapInfo = (CGBitmapInfo)kCGImageAlphaNoneSkipLast;
     }
     
-    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
+//    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, 8, CGImageGetBytesPerRow(imageRef), CGColorSpaceCreateDeviceRGB(), kCGImageAlphaNoneSkipFirst);
+    CGContextSetShouldAntialias(bitmap, YES);
     // Set the interpolation quality of `context' to `quality'
     CGContextSetInterpolationQuality(bitmap, kCGInterpolationHigh);
     CGContextDrawImage(bitmap, CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight), imageRef);
