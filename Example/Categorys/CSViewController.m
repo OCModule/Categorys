@@ -76,7 +76,7 @@
 //    imageView1.contentMode = UIViewContentModeScaleAspectFill;
     
 //    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
-    imageView1.image = [image1 resizedImage:imageView1.bounds.size interpolationQuality:kCGInterpolationHigh];
+    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
 }
 
 //- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {
@@ -145,8 +145,7 @@
         bitmapInfo = (CGBitmapInfo)kCGImageAlphaNoneSkipLast;
     }
     
-//    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
-    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, 8, CGImageGetBytesPerRow(imageRef), CGColorSpaceCreateDeviceRGB(), kCGImageAlphaNoneSkipFirst);
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
     CGContextSetShouldAntialias(bitmap, YES);
     // Set the interpolation quality of `context' to `quality'
     CGContextSetInterpolationQuality(bitmap, kCGInterpolationHigh);
