@@ -73,10 +73,8 @@
     imageView1.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:imageView1];
     UIImage *image1 = [UIImage imageNamed:@"image"];
-//    imageView1.contentMode = UIViewContentModeScaleAspectFill;
     
-//    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
-    imageView1.image = [self imageWithImage:image1 scaledToSizeWithSameAspectRatio:imageView1.bounds.size];
+    imageView1.image = [image1 croppedImage:[self rectWithImage:image1 aspectRatio:16.0/9.0]];
 }
 
 //- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {
@@ -102,61 +100,17 @@
     [super viewDidAppear:animated];
 }
 
-/// not clear 图片会失真
-- (UIImage *)imageWithImage:(UIImage*)sourceImage scaledToSizeWithSameAspectRatio:(CGSize)targetSize {
-    CGSize imageSize = sourceImage.size;
+/// 图片压缩 size 太小图片会失真
+- (CGRect)rectWithImage:(UIImage*)image aspectRatio:(CGFloat)ratio {
+    CGSize imageSize = image.size;
     CGFloat width = imageSize.width;
     CGFloat height = imageSize.height;
-    CGFloat targetWidth = targetSize.width;
-    CGFloat targetHeight = targetSize.height;
-    CGFloat scaleFactor = 0.0;
-    CGFloat scaledWidth = targetWidth;
-    CGFloat scaledHeight = targetHeight;
+    CGFloat scaledWidth = imageSize.width;
+    CGFloat scaledHeight = width/ratio;
     CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
-    
-    if (CGSizeEqualToSize(imageSize, targetSize) == NO) {
-        CGFloat widthFactor = targetWidth / width;
-        CGFloat heightFactor = targetHeight / height;
-        
-        if (widthFactor > heightFactor) {
-            scaleFactor = widthFactor; // scale to fit height
-        }
-        else {
-            scaleFactor = heightFactor; // scale to fit width
-        }
-        
-        scaledWidth  = width * scaleFactor;
-        scaledHeight = height * scaleFactor;
-        
-        // center the image
-        if (widthFactor > heightFactor) {
-//            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
-        }
-        else if (widthFactor < heightFactor) {
-            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
-        }
-    }
-    
-    CGImageRef imageRef = [sourceImage CGImage];
-    CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
-    CGColorSpaceRef colorSpaceInfo = CGImageGetColorSpace(imageRef);
-
-    if (bitmapInfo == kCGImageAlphaNone) {
-        bitmapInfo = (CGBitmapInfo)kCGImageAlphaNoneSkipLast;
-    }
-    
-    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
-    CGContextSetShouldAntialias(bitmap, YES);
-    // Set the interpolation quality of `context' to `quality'
-    CGContextSetInterpolationQuality(bitmap, kCGInterpolationHigh);
-    CGContextDrawImage(bitmap, CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight), imageRef);
-    CGImageRef ref = CGBitmapContextCreateImage(bitmap);
-    UIImage* newImage = [UIImage imageWithCGImage:ref];
-    
-    CGContextRelease(bitmap);
-    CGImageRelease(ref);
-    
-    return newImage;
+    thumbnailPoint.x = 0;
+    thumbnailPoint.y = height - scaledHeight;
+    return CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight);
 }
 
 
