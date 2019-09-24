@@ -9,7 +9,9 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Warning
+
+实际项目中使用时记得加上前缀或者是尾缀以避免覆盖类中的实现
 
 ## Installation
 
