@@ -36,6 +36,7 @@
 		AA385171209C3E1300861F0F /* CSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385170209C3E1300861F0F /* CSButton.m */; };
 		AA385174209C3E3B00861F0F /* CSVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385173209C3E3B00861F0F /* CSVeiw.m */; };
 		AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */; };
+		AA783DE123470C5A006DB8F7 /* CSSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA783DE023470C5A006DB8F7 /* CSSingleton.m */; };
 		E75BB87C662F398F1B8E379E /* Pods_Categorys_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		AA385173209C3E3B00861F0F /* CSVeiw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSVeiw.m; sourceTree = "<group>"; };
 		AA70DBB71FDFCC23007752B8 /* CSKVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSKVOController.h; sourceTree = "<group>"; };
 		AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSKVOControlle.m; sourceTree = "<group>"; };
+		AA783DDF23470C5A006DB8F7 /* CSSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSingleton.h; sourceTree = "<group>"; };
+		AA783DE023470C5A006DB8F7 /* CSSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSingleton.m; sourceTree = "<group>"; };
 		BBAD22D605EBEE2326C75B7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DC2364621FFCBEDAE2816F82 /* Pods-Categorys_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Categorys_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Categorys_Example/Pods-Categorys_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB547FDE79B599F1C1FFD6B4 /* Categorys.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Categorys.podspec; path = ../Categorys.podspec; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				AA14E30B22993D6300F340A2 /* UIViewController+hook1.m */,
 				AA14E30D22993D7500F340A2 /* UIViewController+hook2.h */,
 				AA14E30E22993D7500F340A2 /* UIViewController+hook2.m */,
+				AA783DDF23470C5A006DB8F7 /* CSSingleton.h */,
+				AA783DE023470C5A006DB8F7 /* CSSingleton.m */,
 			);
 			name = "Example for Categorys";
 			path = Categorys;
@@ -418,6 +423,7 @@
 				AA14E30C22993D6300F340A2 /* UIViewController+hook1.m in Sources */,
 				AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */,
 				AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */,
+				AA783DE123470C5A006DB8F7 /* CSSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

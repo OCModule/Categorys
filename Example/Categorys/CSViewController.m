@@ -12,19 +12,30 @@
 #import "CSVeiw.h"
 #import <Categorys/UIControl+click.h>
 #import <Categorys/UIImage+Resize.h>
+#import "CSSingleton.h"
 
 
 @interface CSViewController ()
-
 
 @end
 
 @implementation CSViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     __weak typeof(self) weakself = self;
+    
+    
+    CSSingleton *test1 = [CSSingleton shared];
+    
+    CSSingleton *test2 = [CSSingleton shared];
+    
+    [[CSSingleton shared] clear];
+    
+    CSSingleton *test3 = [CSSingleton shared];
+    
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 120, 60, 44)];
     button.timeInterval = 2.0;
@@ -50,7 +61,7 @@
 //        NSLog(@"🌹--🇺🇸 ==%@", strongself);
 //    } andDelay:5];
     UIView *test = [[CSVeiw alloc] init];
-    
+
     id obj = [self performSelector:@selector(sum:arg:arg:) withObjects:@[@2, @3, @5]];
 //    id obj = [self perform:@selector(sum:arg:arg:) withObject:@2, @3, @4];
     
