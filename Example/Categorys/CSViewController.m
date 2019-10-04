@@ -32,11 +32,6 @@
     
     CSSingleton *test2 = [CSSingleton shared];
     
-    [[CSSingleton shared] clear];
-    
-    CSSingleton *test3 = [CSSingleton shared];
-    
-    
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 120, 60, 44)];
     button.timeInterval = 2.0;
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -109,6 +104,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    CSSingleton *test3 = [CSSingleton shared];
+    
+    CSSingleton *test4 = [CSSingleton shared];
+
 }
 
 /// 图片压缩 size 太小图片会失真

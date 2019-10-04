@@ -8,13 +8,11 @@
 
 #import "CSSingleton.h"
 
-
 @implementation CSSingleton
-
-static __weak CSSingleton *instance;
 
 + (instancetype)shared
 {
+    static __weak CSSingleton *instance;
     CSSingleton *strongInstance = instance;
     @synchronized(self) {
         if (strongInstance == nil) {
@@ -25,8 +23,5 @@ static __weak CSSingleton *instance;
     return strongInstance;
 }
 
-- (void)clear {
-    instance = nil;
-}
 
 @end
