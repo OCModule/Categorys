@@ -27,6 +27,7 @@
 #import "UINavigationController+Extend.h"
 #import "UIResponder+Router.h"
 #import "UIView+Extend.h"
+#import "UIView+IBDesignable.h"
 
 FOUNDATION_EXPORT double CategorysVersionNumber;
 FOUNDATION_EXPORT const unsigned char CategorysVersionString[];

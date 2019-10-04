@@ -23,15 +23,18 @@ typedef NS_ENUM(NSUInteger, IMGPriorityStyle) {
 
 - (UIImage *)resized:(CGSize)newSize
      interpolationQuality:(CGInterpolationQuality)quality;
-
-
+// 裁剪图片
 - (UIImage *)croppedImage:(CGRect)bounds;
+
+// 压缩图片 有损压缩
 - (UIImage *)thumbnailImage:(NSInteger)thumbnailSize
           transparentBorder:(NSUInteger)borderSize
                cornerRadius:(NSUInteger)cornerRadius
        interpolationQuality:(CGInterpolationQuality)quality;
+
 - (UIImage *)resizedImage:(CGSize)newSize
      interpolationQuality:(CGInterpolationQuality)quality;
+
 - (UIImage *)resizedImageWithContentMode:(UIViewContentMode)contentMode
                                   bounds:(CGSize)bounds
                     interpolationQuality:(CGInterpolationQuality)quality;
