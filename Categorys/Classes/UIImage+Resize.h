@@ -38,4 +38,6 @@ typedef NS_ENUM(NSUInteger, IMGPriorityStyle) {
 - (UIImage *)resizedImageWithContentMode:(UIViewContentMode)contentMode
                                   bounds:(CGSize)bounds
                     interpolationQuality:(CGInterpolationQuality)quality;
+
+- (UIImage *_Nullable)imageScaledBySize:(CGSize)newSize;
 @end

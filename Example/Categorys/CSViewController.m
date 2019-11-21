@@ -64,7 +64,10 @@
 //    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
     
 //    CGInterpolationQuality
-    imageView.image = [image resized: imageView.bounds.size priority:IMGPriorityBottomTop];
+    imageView.image = image;
+//    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+//    imageView.image = [image resized: imageView.bounds.size priority:IMGPriorityBottomTop];
 //    imageView.image = [self imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
 //    imageView.image = [self imageWithImage:image aspectRatio:imageView.bounds.size];
     
@@ -74,7 +77,9 @@
     [self.view addSubview:imageView1];
     UIImage *image1 = [UIImage imageNamed:@"image"];
     
-    imageView1.image = [image1 croppedImage:[self rectWithImage:image1 aspectRatio:16.0/9.0]];
+//    imageView1.image = [image1 croppedImage:[self rectWithImage:image1 aspectRatio:16.0/9.0]];
+    imageView1.image = [image1 imageScaledBySize:imageView1.frame.size];
+    
 }
 
 //- (NSInteger)sum:(NSInteger)arg1 arg:(NSInteger)arg2 arg:(NSInteger)arg3 {

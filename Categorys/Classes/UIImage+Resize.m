@@ -285,4 +285,46 @@ interpolationQuality:(CGInterpolationQuality)quality {
     return transform;
 }
 
+- (UIImage *_Nullable)imageScaledBySize:(CGSize)newSize {
+    CGSize imageSize = self.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = newSize.width;
+    CGFloat targetHeight = newSize.height;
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    if (CGSizeEqualToSize(imageSize, newSize) == NO) {
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        if (widthFactor > heightFactor) {
+            scaleFactor = widthFactor; // scale to fit height
+        }
+        else {
+            scaleFactor = heightFactor; // scale to fit width
+        }
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        // center the image
+        if (widthFactor > heightFactor) {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else if (widthFactor < heightFactor) {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5 ;
+        }
+    }
+    // Create a graphics image context
+    UIGraphicsBeginImageContextWithOptions(newSize, YES, 0.0);
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [self drawInRect:CGRectMake(thumbnailPoint.x,thumbnailPoint.y,scaledWidth,scaledHeight)];
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    // End the context
+    UIGraphicsEndImageContext();
+    // Return the new image.
+    return newImage;
+}
+
 @end
