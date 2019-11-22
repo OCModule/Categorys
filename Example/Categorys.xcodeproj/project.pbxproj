@@ -35,6 +35,8 @@
 		AA353B641FE4195300FBCFFD /* CSNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */; };
 		AA385171209C3E1300861F0F /* CSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385170209C3E1300861F0F /* CSButton.m */; };
 		AA385174209C3E3B00861F0F /* CSVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385173209C3E3B00861F0F /* CSVeiw.m */; };
+		AA3A659A2387A90E000C08B2 /* UIView+CSTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3A65992387A90E000C08B2 /* UIView+CSTest1.m */; };
+		AA3A659D2387A91F000C08B2 /* UIView+CSTest2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3A659C2387A91F000C08B2 /* UIView+CSTest2.m */; };
 		AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */; };
 		AA783DE123470C5A006DB8F7 /* CSSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA783DE023470C5A006DB8F7 /* CSSingleton.m */; };
 		E75BB87C662F398F1B8E379E /* Pods_Categorys_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */; };
@@ -94,6 +96,10 @@
 		AA385170209C3E1300861F0F /* CSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSButton.m; sourceTree = "<group>"; };
 		AA385172209C3E3B00861F0F /* CSVeiw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVeiw.h; sourceTree = "<group>"; };
 		AA385173209C3E3B00861F0F /* CSVeiw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSVeiw.m; sourceTree = "<group>"; };
+		AA3A65982387A90E000C08B2 /* UIView+CSTest1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CSTest1.h"; sourceTree = "<group>"; };
+		AA3A65992387A90E000C08B2 /* UIView+CSTest1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CSTest1.m"; sourceTree = "<group>"; };
+		AA3A659B2387A91F000C08B2 /* UIView+CSTest2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CSTest2.h"; sourceTree = "<group>"; };
+		AA3A659C2387A91F000C08B2 /* UIView+CSTest2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CSTest2.m"; sourceTree = "<group>"; };
 		AA70DBB71FDFCC23007752B8 /* CSKVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSKVOController.h; sourceTree = "<group>"; };
 		AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSKVOControlle.m; sourceTree = "<group>"; };
 		AA783DDF23470C5A006DB8F7 /* CSSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSingleton.h; sourceTree = "<group>"; };
@@ -189,6 +195,10 @@
 				AA14E30E22993D7500F340A2 /* UIViewController+hook2.m */,
 				AA783DDF23470C5A006DB8F7 /* CSSingleton.h */,
 				AA783DE023470C5A006DB8F7 /* CSSingleton.m */,
+				AA3A65982387A90E000C08B2 /* UIView+CSTest1.h */,
+				AA3A65992387A90E000C08B2 /* UIView+CSTest1.m */,
+				AA3A659B2387A91F000C08B2 /* UIView+CSTest2.h */,
+				AA3A659C2387A91F000C08B2 /* UIView+CSTest2.m */,
 			);
 			name = "Example for Categorys";
 			path = Categorys;
@@ -414,6 +424,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3A659A2387A90E000C08B2 /* UIView+CSTest1.m in Sources */,
+				AA3A659D2387A91F000C08B2 /* UIView+CSTest2.m in Sources */,
 				6003F59E195388D20070C39A /* CSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

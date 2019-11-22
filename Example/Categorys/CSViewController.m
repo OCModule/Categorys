@@ -13,6 +13,8 @@
 #import <Categorys/UIControl+click.h>
 #import <Categorys/UIImage+Resize.h>
 #import "CSSingleton.h"
+#import "UIView+CSTest1.h"
+#import "UIView+CSTest2.h"
 
 
 @interface CSViewController ()
@@ -27,6 +29,7 @@
     [super viewDidLoad];
     __weak typeof(self) weakself = self;
     
+    [self.view test];
     
     CSSingleton *test1 = [CSSingleton shared];
     
