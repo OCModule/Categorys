@@ -15,6 +15,7 @@
 #import "CSSingleton.h"
 #import "UIView+CSTest1.h"
 #import "UIView+CSTest2.h"
+#import "NSObject+AssociatedObject.h"
 
 
 @interface CSViewController ()
@@ -97,8 +98,9 @@
 //    return arg1 + arg2 + arg3;
 //}
 
+
 - (void)click: (UIButton *)sender {
-    NSLog(@"🌹🇺🇸ლ(′◉❥◉｀ლ)%@", sender.currentTitle);
+//    NSLog(@"🌹🇺🇸ლ(′◉❥◉｀ლ)%@", sender.currentTitle);
 }
 
 - (NSNumber *)sum:(NSNumber *)arg1 arg:(NSNumber *)arg2 arg:(NSNumber *)arg3 {
@@ -107,6 +109,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSObject *obj = [NSObject new];
+    {
+        NSObject *obj1 = [NSObject new];
+        [obj setWeakObject:obj1 withKey:NSSelectorFromString(@"setObj1:")];
+        NSLog(@"🌹 1 %@", [obj object:NSSelectorFromString(@"setObj1:")]);
+    }
+    NSLog(@"🌹 2 %@", [obj object:NSSelectorFromString(@"setObj1:")]);
 
 }
 
