@@ -7,16 +7,7 @@
 
 #import "NSObject+AssociatedObject.h"
 #import <objc/runtime.h>
-
-typedef SEL (^DeallocBlock)(void);
-
-static NSString *DEALLOC_BLOCK_KEY = @"DEALLOC_BLOCK_KEY";
-
-@interface NSObject()
-
-@property (nonatomic, copy) DeallocBlock deallocBlock;
-
-@end
+#import "NSObject+NSDeallocBlockExecutor.h"
 
 @implementation NSObject (AssociatedObject)
 
@@ -41,9 +32,8 @@ static NSString *DEALLOC_BLOCK_KEY = @"DEALLOC_BLOCK_KEY";
 }
 
 - (void)setWeakObject:(id)weakObject withKey:(SEL)key {
-    [weakObject setDeallocBlock:^SEL {
+    [weakObject ns_createExecutorWithHandlerBlock:^{
         objc_setAssociatedObject(self, key, nil, OBJC_ASSOCIATION_ASSIGN);
-        return key;
     }];
     objc_setAssociatedObject(self, key, weakObject, OBJC_ASSOCIATION_ASSIGN);
 }
@@ -64,23 +54,5 @@ static NSString *DEALLOC_BLOCK_KEY = @"DEALLOC_BLOCK_KEY";
     objc_setAssociatedObject(self, key, object, OBJC_ASSOCIATION_COPY);
 }
 
-- (void)setDeallocBlock:(DeallocBlock)deallocBlock {
-    objc_setAssociatedObject(self, &DEALLOC_BLOCK_KEY, deallocBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (DeallocBlock)deallocBlock {
-    return objc_getAssociatedObject(self, &DEALLOC_BLOCK_KEY);
-}
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
-// 这个方法会覆盖 系统 的 dealloc 从 NSObject 而引起无法释放的问题
-//- (void)dealloc {
-//    if (self.deallocBlock) {
-//        SEL key = self.deallocBlock();
-//        objc_setAssociatedObject(self, key, nil, OBJC_ASSOCIATION_ASSIGN);
-//    }
-//}
-#pragma clang diagnostic pop
 
 @end
