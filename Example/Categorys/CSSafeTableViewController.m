@@ -8,6 +8,8 @@
 
 #import "CSSafeTableViewController.h"
 #import <Categorys/UIControl+Block.h>
+#import <Categorys/UIResponder+Router.h>
+#import <Categorys/NSObject+PerformIfResponds.h>
 
 @interface CSSafeTableViewController ()
 
@@ -21,94 +23,72 @@
     [[[UIButton alloc] init] touchUpInside:^{
         
     }];
-//    [self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>];
-////    [self.navigationController popViewControllerAnimated:<#(BOOL)#>];
-//    [self presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:^{
-//        <#code#>
-//    }];
-    [self.navigationController popViewControllerAnimated:YES];
-//    [self.navigationController popToViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>];
-//    [self.navigationController popToRootViewControllerAnimated:<#(BOOL)#>];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+}
+
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                    
+                    break;
+                case 1:
+                    [tableView routerEventWithName:@"click:" userInfo:@{@"say": @"hello world"}];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                    
+                    break;
+                case 1:
+                {
+                    id obj = [self performSelector:@selector(sum:arg:arg:) withObjects:@2, @3, @5,nil];
+                    NSLog(@"🌹： %@", obj);
+                }
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (void)routerEventWithName:(NSString *)aName userInfo:(NSDictionary *)userInfo {
     
-    // Configure the cell...
-    
-    return cell;
+    NSLog(@"aName: %@, userInfo: %@", aName, userInfo.debugDescription);
+
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSArray *)varArgFunc:(id)value,... NS_REQUIRES_NIL_TERMINATION {
+    NSMutableArray *aux = [NSMutableArray arrayWithObjects:value, nil];
+    va_list list;
+    va_start(list, value);
+    while (YES)
+    {
+        id val = va_arg(list, id);
+        if (!val) {
+            break;
+        }
+        [aux addObject:val];
+    }
+    va_end(list);
+    return [aux copy];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (NSNumber *)sum:(NSNumber *)arg1 arg:(NSNumber *)arg2 arg:(NSNumber *)arg3 {
+    NSInteger temp = [arg1 integerValue] + [arg2 integerValue] + [arg3 integerValue];
+    return [NSNumber numberWithInteger:temp];
 }
 
 @end

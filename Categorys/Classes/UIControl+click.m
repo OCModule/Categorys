@@ -8,6 +8,9 @@
 #import "UIControl+click.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+/*
+ 防止用户重复点击
+ */
 
 @implementation UIControl (click)
 

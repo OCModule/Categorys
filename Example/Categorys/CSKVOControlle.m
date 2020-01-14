@@ -8,8 +8,8 @@
 
 #import "CSKVOController.h"
 
-//#import <Categorys/NSObject+KVO.h>
-//#import <Categorys/NSObject+Observer.h>
+#import <Categorys/NSObject+KVO.h>
+#import <Categorys/NSObject+Observer.h>
 
 @interface Message : NSObject
 
@@ -57,7 +57,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return;
     switch (indexPath.section) {
         case 0:
             switch (indexPath.row) {
@@ -80,12 +79,12 @@
                     [_message addObserver:_observer forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
                     break;
                 case 2:
-//                    [_message cs_addObserver:_observer forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+                    [_message cs_addObserver:_observer forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
                     break;
                 case 3:
-//                    [_message cs_addObserver:_observer forKey:@"text" withBlock:^(id observedObject, NSString *observedKey, id oldValue, id newValue) {
-//                        NSLog(@"imp -- value == %@", newValue);
-//                    }];
+                    [_message cs_addObserver:_observer forKey:@"text" withBlock:^(id observedObject, NSString *observedKey, id oldValue, id newValue) {
+                        NSLog(@"imp -- value == %@", newValue);
+                    }];
                     break;
                 default:
                     break;
@@ -94,7 +93,7 @@
         case 2:
             switch (indexPath.row) {
                 case 0:
-//                    [_message cs_removeObserver:_observer forKey:@"text"];
+                    [_message cs_removeObserver:_observer forKey:@"text"];
                     _observer = nil;
                     break;
                 case 1:

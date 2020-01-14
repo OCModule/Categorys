@@ -8,7 +8,6 @@
 
 #import "CSViewController.h"
 #import <Categorys/NSObject+Block.h>
-#import <Categorys/NSObject+PerformIfResponds.h>
 #import "CSVeiw.h"
 #import <Categorys/UIControl+click.h>
 #import <Categorys/UIImage+Resize.h>
@@ -49,7 +48,7 @@
     [button1 setTitle:@"click 22" forState:UIControlStateNormal];
     [button1 addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     button1.isIgnoreEvent = YES;
-    [self.view addSubview:button1];
+//    [self.view addSubview:button1];
 
 //    [[NSObject new] perform:^{
 //        __strong typeof(self) strongself = weakself;
@@ -61,15 +60,13 @@
 //    } andDelay:5];
     UIView *test = [[CSVeiw alloc] init];
 
-    id obj = [self performSelector:@selector(sum:arg:arg:) withObjects:@[@2, @3, @5]];
 //    id obj = [self perform:@selector(sum:arg:arg:) withObject:@2, @3, @4];
     
-    NSLog(@"🌹🇺🇸%@", obj);
     CGFloat width = self.view.bounds.size.width - 2 * 16;
     CGFloat height = width / 16.0 * 9.0;
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 100, width, height)];
     imageView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:imageView];
+//    [self.view addSubview:imageView];
     UIImage *image = [UIImage imageNamed:@"image"];
 //    imageView.image = [UIImage imageWithImage:image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
     
@@ -84,7 +81,7 @@
     
     UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(16, 360, width, height)];
     imageView1.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:imageView1];
+//    [self.view addSubview:imageView1];
     UIImage *image1 = [UIImage imageNamed:@"image"];
     
 //    imageView1.image = [image1 croppedImage:[self rectWithImage:image1 aspectRatio:16.0/9.0]];
@@ -103,13 +100,7 @@
 //    NSLog(@"🌹🇺🇸ლ(′◉❥◉｀ლ)%@", sender.currentTitle);
 }
 
-- (NSNumber *)sum:(NSNumber *)arg1 arg:(NSNumber *)arg2 arg:(NSNumber *)arg3 {
-    NSInteger temp = [arg1 integerValue] + [arg2 integerValue] + [arg3 integerValue];
-    return [NSNumber numberWithInteger:temp];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     NSObject *obj = [NSObject new];
     {
         NSObject *obj1 = [NSObject new];
@@ -117,7 +108,6 @@
         NSLog(@"🌹 1 %@", [obj object:NSSelectorFromString(@"setObj1:")]);
     }
     NSLog(@"🌹 2 %@", [obj object:NSSelectorFromString(@"setObj1:")]);
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {

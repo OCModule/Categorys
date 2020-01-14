@@ -20,23 +20,35 @@
 }
 
 - (id)performSelector:(SEL)selector
-            withObjects: (NSArray<id> *)objects {
+            withObjects:(id)arg1, ... NS_REQUIRES_NIL_TERMINATION {
     if (![self respondsToSelector:selector]) {
         return nil;
     }
     NSMethodSignature *signature = [self methodSignatureForSelector:selector];
     if (signature) {
-        NSInvocation *invo = [NSInvocation invocationWithMethodSignature:signature];
-        [invo setTarget:self];
-        [invo setSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:self];
+        [invocation setSelector:selector];
+        NSMutableArray *aux = [NSMutableArray arrayWithObjects:arg1, nil];
+        va_list list;
+        va_start(list, arg1);
+        while (YES) {
+            id val = va_arg(list, id);
+            if (!val) {
+                break;
+            }
+            [aux addObject:val];
+        }
+        va_end(list);
+        NSArray *objects = [aux copy];
         for (NSInteger i=0; i < objects.count; i++) {
             id obj = objects[i];
-            [invo setArgument:&obj atIndex:i + 2];
+            [invocation setArgument:&obj atIndex:i + 2];
         }
-        [invo invoke];
+        [invocation invoke];
         if (signature.methodReturnLength) {
             id anObject;
-            [invo getReturnValue:&anObject];
+            [invocation getReturnValue:&anObject];
             return anObject;
         } else {
             return nil;

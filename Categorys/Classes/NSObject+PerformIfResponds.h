@@ -12,6 +12,6 @@
 - (id)performIfResponds:(SEL)aSelector;
 
 - (id)performSelector:(SEL)selector
-          withObjects: (NSArray<id> *)objects;
+          withObjects:(id)arg1, ... NS_REQUIRES_NIL_TERMINATION;
 
 @end

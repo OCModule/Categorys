@@ -173,13 +173,12 @@
 		6003F593195388D20070C39A /* Example for Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				AA29105E23CD8ED000C086AE /* KVO */,
 				6003F59C195388D20070C39A /* CSAppDelegate.h */,
 				6003F59D195388D20070C39A /* CSAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* CSViewController.h */,
 				6003F5A6195388D20070C39A /* CSViewController.m */,
-				AA70DBB71FDFCC23007752B8 /* CSKVOController.h */,
-				AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */,
 				AA353B5A1FE376A500FBCFFD /* CSSafeTableViewController.h */,
 				AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -260,6 +259,15 @@
 				BBAD22D605EBEE2326C75B7B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		AA29105E23CD8ED000C086AE /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				AA70DBB71FDFCC23007752B8 /* CSKVOController.h */,
+				AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */,
+			);
+			name = KVO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
