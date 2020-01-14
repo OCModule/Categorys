@@ -53,6 +53,8 @@
 		AA17E04A2339E126007F38BE /* NSDeallocBlockExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA17E0462339E126007F38BE /* NSDeallocBlockExecutor.h */; };
 		AA17E04B2339E126007F38BE /* NSDeallocBlockExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = AA17E0472339E126007F38BE /* NSDeallocBlockExecutor.m */; };
 		AA17E04C2339E126007F38BE /* NSObject+NSDeallocBlockExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA17E0482339E126007F38BE /* NSObject+NSDeallocBlockExecutor.h */; };
+		AA29105C23CD671600C086AE /* CQWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = AA29105A23CD671600C086AE /* CQWeakProxy.h */; };
+		AA29105D23CD671600C086AE /* CQWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA29105B23CD671600C086AE /* CQWeakProxy.m */; };
 		B03AEA5247C2DC8A79C373BD567F44BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B776326FB0E4A67165368F343B351DCA /* NSObject+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A86A75589CF1B5DD1515B397A79083 /* NSObject+Block.m */; };
 		C1185E26CE29342516E29EBF99EB348D /* NSObject+Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = B44DAB1AD6F072E97A5F503EAB7F28A6 /* NSObject+Observer.m */; };
@@ -157,6 +159,8 @@
 		AA17E0462339E126007F38BE /* NSDeallocBlockExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDeallocBlockExecutor.h; sourceTree = "<group>"; };
 		AA17E0472339E126007F38BE /* NSDeallocBlockExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDeallocBlockExecutor.m; sourceTree = "<group>"; };
 		AA17E0482339E126007F38BE /* NSObject+NSDeallocBlockExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSDeallocBlockExecutor.h"; sourceTree = "<group>"; };
+		AA29105A23CD671600C086AE /* CQWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CQWeakProxy.h; path = Categorys/Classes/CQWeakProxy.h; sourceTree = "<group>"; };
+		AA29105B23CD671600C086AE /* CQWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CQWeakProxy.m; path = Categorys/Classes/CQWeakProxy.m; sourceTree = "<group>"; };
 		ABC7BB4F791850D4E773D75DA4279877 /* Categorys-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Categorys-prefix.pch"; sourceTree = "<group>"; };
 		AE04D4C45409FA985166D57505C45175 /* Pods-Categorys_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Categorys_Tests-dummy.m"; sourceTree = "<group>"; };
 		B292792C530DD2CE2A210760F87DA3EB /* Pods-Categorys_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Categorys_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 				88C3155BBD11AA04D5360CE487794ABB /* UIView+Extend.m */,
 				7580AEE9F01EF856FE6BA765564355DB /* UIView+IBDesignable.h */,
 				6D8F718548763194720EA5C68038B3FA /* UIView+IBDesignable.m */,
+				AA29105A23CD671600C086AE /* CQWeakProxy.h */,
+				AA29105B23CD671600C086AE /* CQWeakProxy.m */,
 				C782ADB6474F638091B0ADDD66861978 /* Pod */,
 				17054F71E576A5477C58C2156A64AE17 /* Support Files */,
 			);
@@ -480,6 +486,7 @@
 				97C01CD88140066A5C6D2E1C4431B34F /* UIControl+click.h in Headers */,
 				6FDEE96079E2A72FFBE7FF353089D9C1 /* UIImage+Alpha.h in Headers */,
 				4B2D6EC3E8088A81529E771298386BC9 /* UIImage+Color.h in Headers */,
+				AA29105C23CD671600C086AE /* CQWeakProxy.h in Headers */,
 				6ECACA030FBD5406FC90A44F395DB3D9 /* UIImage+Resize.h in Headers */,
 				8C546C8081CA381BAA5756FFA392A88A /* UIImage+RoundedCorner.h in Headers */,
 				A24B830F4066B59D579287D762C3F7E2 /* UINavigationController+Extend.h in Headers */,
@@ -671,6 +678,7 @@
 				9BEB78F6AD8186FE033FA612CCBE67AA /* NSObject+AssociatedObject.m in Sources */,
 				B776326FB0E4A67165368F343B351DCA /* NSObject+Block.m in Sources */,
 				37E9E1AA7993ACCC27160ACA980CB5DF /* NSObject+HRNLog.m in Sources */,
+				AA29105D23CD671600C086AE /* CQWeakProxy.m in Sources */,
 				F3DE782EF2CA2A804CC822EF8D2BC74B /* NSObject+HRNSwizzling.m in Sources */,
 				69C4B5D55E00E107B5F629BE880A4BFE /* NSObject+KVO.m in Sources */,
 				F0291576661E473D087292EADABEC432 /* NSObject+NotNull.m in Sources */,

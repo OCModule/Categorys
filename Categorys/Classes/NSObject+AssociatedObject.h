@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setWeakObject:(id)object withKey:(SEL)key;
 
+//- (id)weakObject:(SEL)key;
+
 @end
 
 NS_ASSUME_NONNULL_END

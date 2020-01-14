@@ -8,6 +8,7 @@
 #import "NSObject+AssociatedObject.h"
 #import <objc/runtime.h>
 #import "NSObject+NSDeallocBlockExecutor.h"
+#import "CQWeakProxy.h"
 
 @implementation NSObject (AssociatedObject)
 
@@ -37,6 +38,16 @@
     }];
     objc_setAssociatedObject(self, key, weakObject, OBJC_ASSOCIATION_ASSIGN);
 }
+
+//- (void)setWeakObject:(id)weakObject withKey:(SEL)key {
+//    CQWeakProxy *proxy = [CQWeakProxy proxyWithTarget:weakObject];
+//    objc_setAssociatedObject(self, key, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+//
+//- (id)weakObject:(SEL)key {
+//    CQWeakProxy *proxy = objc_getAssociatedObject(self, key);
+//    return proxy.target;
+//}
 
 - (void)setRetainNonatomicObject:(id)object withKey:(SEL)key {
     objc_setAssociatedObject(self, key, object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
