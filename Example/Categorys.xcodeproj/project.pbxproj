@@ -31,6 +31,7 @@
 		AA2662751FE4DD08007F52B5 /* CSNSNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662741FE4DD08007F52B5 /* CSNSNumberTests.m */; };
 		AA2662771FE4E2D4007F52B5 /* CSNSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662761FE4E2D4007F52B5 /* CSNSStringTests.m */; };
 		AA2662791FE4E586007F52B5 /* CSNSMutableStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2662781FE4E586007F52B5 /* CSNSMutableStringTests.m */; };
+		AA29106F23D00BA400C086AE /* CSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA29106E23D00BA400C086AE /* CSTimerViewController.m */; };
 		AA353B5C1FE376A500FBCFFD /* CSSafeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */; };
 		AA353B641FE4195300FBCFFD /* CSNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */; };
 		AA385171209C3E1300861F0F /* CSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA385170209C3E1300861F0F /* CSButton.m */; };
@@ -89,6 +90,8 @@
 		AA2662741FE4DD08007F52B5 /* CSNSNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSNumberTests.m; sourceTree = "<group>"; };
 		AA2662761FE4E2D4007F52B5 /* CSNSStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSStringTests.m; sourceTree = "<group>"; };
 		AA2662781FE4E586007F52B5 /* CSNSMutableStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSMutableStringTests.m; sourceTree = "<group>"; };
+		AA29106D23D00BA400C086AE /* CSTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTimerViewController.h; sourceTree = "<group>"; };
+		AA29106E23D00BA400C086AE /* CSTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSTimerViewController.m; sourceTree = "<group>"; };
 		AA353B5A1FE376A500FBCFFD /* CSSafeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSafeTableViewController.h; sourceTree = "<group>"; };
 		AA353B5B1FE376A500FBCFFD /* CSSafeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSafeTableViewController.m; sourceTree = "<group>"; };
 		AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNSArrayTests.m; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		6003F593195388D20070C39A /* Example for Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				AA29106C23D00B6B00C086AE /* Timer */,
 				AA29105E23CD8ED000C086AE /* KVO */,
 				6003F59C195388D20070C39A /* CSAppDelegate.h */,
 				6003F59D195388D20070C39A /* CSAppDelegate.m */,
@@ -268,6 +272,15 @@
 				AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */,
 			);
 			name = KVO;
+			sourceTree = "<group>";
+		};
+		AA29106C23D00B6B00C086AE /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				AA29106D23D00BA400C086AE /* CSTimerViewController.h */,
+				AA29106E23D00BA400C086AE /* CSTimerViewController.m */,
+			);
+			name = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA29106F23D00BA400C086AE /* CSTimerViewController.m in Sources */,
 				AA3A659A2387A90E000C08B2 /* UIView+CSTest1.m in Sources */,
 				AA3A659D2387A91F000C08B2 /* UIView+CSTest2.m in Sources */,
 				6003F59E195388D20070C39A /* CSAppDelegate.m in Sources */,

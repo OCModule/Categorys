@@ -10,6 +10,7 @@
 #import <Categorys/UIControl+Block.h>
 #import <Categorys/UIResponder+Router.h>
 #import <Categorys/NSObject+PerformIfResponds.h>
+#import "CSTimerViewController.h"
 
 @interface CSSafeTableViewController ()
 
@@ -55,6 +56,11 @@
                     NSLog(@"🌹： %@", obj);
                 }
                     break;
+                case 2:
+                {
+                    CSTimerViewController *dest = [[CSTimerViewController alloc] init];
+                    [self.navigationController pushViewController:dest animated:YES];
+                }
                 default:
                     break;
             }
