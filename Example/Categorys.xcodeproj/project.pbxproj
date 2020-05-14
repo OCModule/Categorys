@@ -334,6 +334,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "wangchengqvan@gmail.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = VCD448UJ2M;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -592,6 +595,7 @@
 			baseConfigurationReference = DC2364621FFCBEDAE2816F82 /* Pods-Categorys_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VCD448UJ2M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Categorys/Categorys-Prefix.pch";
 				INFOPLIST_FILE = "Categorys/Categorys-Info.plist";
@@ -607,6 +611,7 @@
 			baseConfigurationReference = EE1FF8503D8B73AAC920A9BC /* Pods-Categorys_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VCD448UJ2M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Categorys/Categorys-Prefix.pch";
 				INFOPLIST_FILE = "Categorys/Categorys-Info.plist";

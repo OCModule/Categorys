@@ -49,6 +49,8 @@
 		A3AF8466264A64F186F2A8BF57F3C84F /* Categorys-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041E5F9C046F104691FD762E190FDAF /* Categorys-dummy.m */; };
 		A4EA60950098614231645432AF7AF5FC /* SafeNSObject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D00CC41D68766B2EB1C5AE4EA37D9 /* SafeNSObject-dummy.m */; };
 		A7ECFCCBE4795325CC5210913433FA2C /* Categorys-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F7905E5F536626B59760BF5EB15AE4 /* Categorys-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAAA2A14246D74BB00262BE1 /* NSAttributedString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */; };
+		AAAA2A15246D74BB00262BE1 /* NSAttributedString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA2A13246D74BB00262BE1 /* NSAttributedString+Ext.m */; };
 		B03AEA5247C2DC8A79C373BD567F44BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B98A7E3AE7760CFA56DD8146D0723FB4 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = BD644C21886A7FC35E2CE524F8B76679 /* UIImage+RoundedCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC82EDE163F7DE2C7DB3AE27BE9F511 /* NSObject+PerformIfResponds.h in Headers */ = {isa = PBXBuildFile; fileRef = F649226662C1C76B02CF4012283386E5 /* NSObject+PerformIfResponds.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,7 +103,7 @@
 /* Begin PBXFileReference section */
 		00DD30D0001CB64ADFAEA6B6693DE8DB /* SafeNSObject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SafeNSObject.modulemap; sourceTree = "<group>"; };
 		0623199AA22D209B1277FD478055D762 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Safe.m"; path = "SafeNSObject/Classes/NSDictionary+Safe.m"; sourceTree = "<group>"; };
-		0A2835FB23CACE53C7E0DA42A8CCF927 /* Pods_Categorys_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Categorys_Example.framework; path = "Pods-Categorys_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2835FB23CACE53C7E0DA42A8CCF927 /* Pods_Categorys_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Categorys_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E04B9B8A6426D5682F6466BC3E71834 /* NSObject+NSDeallocBlockExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSDeallocBlockExecutor.m"; sourceTree = "<group>"; };
 		0E3C8D6909F5DE24B3D9E8AD4D9BFFBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1098266F3BB3A07C3CA45DEBA741AD8B /* Foundation+Log.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Foundation+Log.m"; path = "Categorys/Classes/Foundation+Log.m"; sourceTree = "<group>"; };
@@ -112,16 +114,16 @@
 		177891DA4E704625CA2D610A5DA7DB79 /* NSObject+Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Block.m"; path = "Categorys/Classes/NSObject+Block.m"; sourceTree = "<group>"; };
 		1A07B8A2C2F6B3AB0DD55ACDF12B8498 /* NSDeallocBlockExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSDeallocBlockExecutor.m; sourceTree = "<group>"; };
 		1AE35ECC209887A922D81D9F43266B25 /* Pods-Categorys_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Categorys_Example-resources.sh"; sourceTree = "<group>"; };
-		1B872C4245312642E56C4BB7F9987885 /* Categorys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Categorys.framework; path = Categorys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B872C4245312642E56C4BB7F9987885 /* Categorys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Categorys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6D00CC41D68766B2EB1C5AE4EA37D9 /* SafeNSObject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SafeNSObject-dummy.m"; sourceTree = "<group>"; };
 		1DD61646A61128BF0F270424D048517D /* Pods-Categorys_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Categorys_Tests.modulemap"; sourceTree = "<group>"; };
 		1E71F95B83CCF8FA9F3986614779D119 /* Pods-Categorys_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Categorys_Example-frameworks.sh"; sourceTree = "<group>"; };
 		21C96CAB0C272847093E8D3AE803727D /* UIView+Extend.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extend.m"; path = "Categorys/Classes/UIView+Extend.m"; sourceTree = "<group>"; };
 		231AEBB570BA29A942C03AD907E6A7E8 /* UINavigationController+Extend.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Extend.m"; path = "Categorys/Classes/UINavigationController+Extend.m"; sourceTree = "<group>"; };
-		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		251D909A295A095BC5451293A392D590 /* UIImage+Alpha.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "Categorys/Classes/UIImage+Alpha.m"; sourceTree = "<group>"; };
 		301CA81EAEC3D503D380DAF94A9660DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30BCB8C1E5FDA6168365964A8DB44D85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		30BCB8C1E5FDA6168365964A8DB44D85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		30C179F2DE3A906FAD504B6879BF6F3E /* UIControl+click.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+click.m"; path = "Categorys/Classes/UIControl+click.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		32A024EFEA8DEA5AA0F6829F959D5EB0 /* NSObject+Observer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Observer.h"; path = "Categorys/Classes/NSObject+Observer.h"; sourceTree = "<group>"; };
@@ -159,16 +161,18 @@
 		904DED574E9A9EB5BFF4DAABD93BE574 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Swizzle.h"; path = "SafeNSObject/Classes/NSObject+Swizzle.h"; sourceTree = "<group>"; };
 		92D19D7152F4C6DCBEA96F6C7296C5F3 /* UIControl+click.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+click.h"; path = "Categorys/Classes/UIControl+click.h"; sourceTree = "<group>"; };
 		9404391C762010E97392430C64E4F420 /* UIView+IBDesignable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IBDesignable.h"; path = "Categorys/Classes/UIView+IBDesignable.h"; sourceTree = "<group>"; };
-		9479B1D538B7BBA0F5C6FA756D71E2AB /* SafeNSObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SafeNSObject.framework; path = SafeNSObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9479B1D538B7BBA0F5C6FA756D71E2AB /* SafeNSObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SafeNSObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E8DC35BD50E1513A26B28FF8885A98 /* NSDeallocBlockExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSDeallocBlockExecutor.h; sourceTree = "<group>"; };
 		9B4E1045DDDD8803F90C009D7FE3BF79 /* NSObject+PerformIfResponds.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PerformIfResponds.m"; path = "Categorys/Classes/NSObject+PerformIfResponds.m"; sourceTree = "<group>"; };
 		9EBCC5D0C4F1B41B781DEB5A98FA51C8 /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+AssociatedObject.m"; path = "Categorys/Classes/NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
-		A0FAFDA35C7CA55011DB3C14FCE2C279 /* Pods_Categorys_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Categorys_Tests.framework; path = "Pods-Categorys_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0FAFDA35C7CA55011DB3C14FCE2C279 /* Pods_Categorys_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Categorys_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71009F7CF8847FD1ABB39A8D0377296 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7310B756CF21A7BD1572F5A2F76A0F9 /* NSObject+HRNSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HRNSwizzling.h"; path = "Categorys/Classes/NSObject+HRNSwizzling.h"; sourceTree = "<group>"; };
 		A9F97B341A8BA382823CB16F555E7E81 /* Pods-Categorys_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Categorys_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A9FFF192CAA3B3B99CCA91FC973F1BF0 /* SafeNSObject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SafeNSObject-umbrella.h"; sourceTree = "<group>"; };
-		ABC80C084EFAC105CEF3727D0C31A3C5 /* Categorys.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Categorys.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+Ext.h"; path = "Categorys/Classes/NSAttributedString+Ext.h"; sourceTree = "<group>"; };
+		AAAA2A13246D74BB00262BE1 /* NSAttributedString+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+Ext.m"; path = "Categorys/Classes/NSAttributedString+Ext.m"; sourceTree = "<group>"; };
+		ABC80C084EFAC105CEF3727D0C31A3C5 /* Categorys.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Categorys.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE04D4C45409FA985166D57505C45175 /* Pods-Categorys_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Categorys_Tests-dummy.m"; sourceTree = "<group>"; };
 		B17E354090F03AEAD6DE2793C8442D47 /* UIImage+Resize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Categorys/Classes/UIImage+Resize.m"; sourceTree = "<group>"; };
 		B292792C530DD2CE2A210760F87DA3EB /* Pods-Categorys_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Categorys_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,7 +192,7 @@
 		E6C9BD60F95A773A0D22479BF0423D2E /* UIResponder+Router.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+Router.m"; path = "Categorys/Classes/UIResponder+Router.m"; sourceTree = "<group>"; };
 		E750CB63035D557B7C2A1BAB5959AACB /* CQWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQWeakProxy.m; path = Categorys/Classes/CQWeakProxy.m; sourceTree = "<group>"; };
 		F55321778FA1CCA04F474BDA8BB2EA49 /* Pods-Categorys_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Categorys_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		F5A5C0B0B655C9928A6AA0E496EC9D4C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F5A5C0B0B655C9928A6AA0E496EC9D4C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F649226662C1C76B02CF4012283386E5 /* NSObject+PerformIfResponds.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PerformIfResponds.h"; path = "Categorys/Classes/NSObject+PerformIfResponds.h"; sourceTree = "<group>"; };
 		F706D0660628B1173497B70A23EE7BF9 /* Pods-Categorys_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Categorys_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC2AC9D619EA688B3FC412937B3EA139 /* NSObject+HRNSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HRNSwizzling.m"; path = "Categorys/Classes/NSObject+HRNSwizzling.m"; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				1EE69F0F0D83A6613097F1281602A338 /* NSDeallocBlockExecutor */,
 				C85071C18FEC97776F276750918B9DD8 /* Pod */,
 				7C059EAB2EA8EEF33C5E7888C3815DF7 /* Support Files */,
+				AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */,
+				AAAA2A13246D74BB00262BE1 /* NSAttributedString+Ext.m */,
 			);
 			name = Categorys;
 			path = ../..;
@@ -308,7 +314,6 @@
 				C903715753D99ADE52CED43F22E4F33D /* NSString+Safe.m */,
 				E5F239E2B19E343FE77C865D98DA26B5 /* Support Files */,
 			);
-			name = SafeNSObject;
 			path = SafeNSObject;
 			sourceTree = "<group>";
 		};
@@ -489,6 +494,7 @@
 				083004132014530E5610B7F557A59FBC /* UIControl+click.h in Headers */,
 				64F2546768FD57EAE6B7DE6305B6BAE8 /* UIImage+Alpha.h in Headers */,
 				D01A6100F261BFB04AD3AD6CE2F7FEC3 /* UIImage+Color.h in Headers */,
+				AAAA2A14246D74BB00262BE1 /* NSAttributedString+Ext.h in Headers */,
 				7C2A05D67CB435E6CFC679D9AFF84441 /* UIImage+Resize.h in Headers */,
 				B98A7E3AE7760CFA56DD8146D0723FB4 /* UIImage+RoundedCorner.h in Headers */,
 				F0F3FD8D5AB08E14D0140693CB8793A4 /* UINavigationController+Extend.h in Headers */,
@@ -688,6 +694,7 @@
 				9629CDEF3B3B5CA5DD6097FF8A871410 /* NSObject+NotNull.m in Sources */,
 				F97AACBDF31DF49B1420660E8CFF36CD /* NSObject+NSDeallocBlockExecutor.m in Sources */,
 				82CEE33A76ADD7BC88E30EB4F2516C9F /* NSObject+Observer.m in Sources */,
+				AAAA2A15246D74BB00262BE1 /* NSAttributedString+Ext.m in Sources */,
 				69250BA1809C6849251B28A3ED0E1F22 /* NSObject+PerformIfResponds.m in Sources */,
 				2F83BBB63E2E8C251F7C288C7A5845CB /* UIControl+Block.m in Sources */,
 				F0C822696EE56777BE7B720EC2896D39 /* UIControl+click.m in Sources */,
@@ -789,8 +796,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
