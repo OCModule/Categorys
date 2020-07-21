@@ -40,6 +40,7 @@
 		AA3A659D2387A91F000C08B2 /* UIView+CSTest2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3A659C2387A91F000C08B2 /* UIView+CSTest2.m */; };
 		AA70DBB91FDFCC23007752B8 /* CSKVOControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */; };
 		AA783DE123470C5A006DB8F7 /* CSSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA783DE023470C5A006DB8F7 /* CSSingleton.m */; };
+		AAAC94C224C697BE00503A43 /* CSMutableCopyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAC94C124C697BE00503A43 /* CSMutableCopyTests.m */; };
 		E75BB87C662F398F1B8E379E /* Pods_Categorys_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9606F138C839AC093DD453 /* Pods_Categorys_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		AA70DBB81FDFCC23007752B8 /* CSKVOControlle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSKVOControlle.m; sourceTree = "<group>"; };
 		AA783DDF23470C5A006DB8F7 /* CSSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSingleton.h; sourceTree = "<group>"; };
 		AA783DE023470C5A006DB8F7 /* CSSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSingleton.m; sourceTree = "<group>"; };
+		AAAC94C124C697BE00503A43 /* CSMutableCopyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMutableCopyTests.m; sourceTree = "<group>"; };
 		BBAD22D605EBEE2326C75B7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DC2364621FFCBEDAE2816F82 /* Pods-Categorys_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Categorys_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Categorys_Example/Pods-Categorys_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB547FDE79B599F1C1FFD6B4 /* Categorys.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Categorys.podspec; path = ../Categorys.podspec; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AAAC94C124C697BE00503A43 /* CSMutableCopyTests.m */,
 				AA26626E1FE4279A007F52B5 /* CSNSMutableArrayTests.m */,
 				AA353B631FE4195300FBCFFD /* CSNSArrayTests.m */,
 				AA2662701FE4BBE3007F52B5 /* CSNSDictionaryTests.m */,
@@ -476,6 +479,7 @@
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 				AA2662791FE4E586007F52B5 /* CSNSMutableStringTests.m in Sources */,
 				AA2662731FE4C102007F52B5 /* CSNSMutableDictionaryTests.m in Sources */,
+				AAAC94C224C697BE00503A43 /* CSMutableCopyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
