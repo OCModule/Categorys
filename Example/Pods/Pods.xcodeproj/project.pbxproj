@@ -49,6 +49,8 @@
 		A3AF8466264A64F186F2A8BF57F3C84F /* Categorys-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041E5F9C046F104691FD762E190FDAF /* Categorys-dummy.m */; };
 		A4EA60950098614231645432AF7AF5FC /* SafeNSObject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D00CC41D68766B2EB1C5AE4EA37D9 /* SafeNSObject-dummy.m */; };
 		A7ECFCCBE4795325CC5210913433FA2C /* Categorys-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F7905E5F536626B59760BF5EB15AE4 /* Categorys-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA97381424CEF6CB00E35880 /* NSFileManager+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA97381224CEF6CA00E35880 /* NSFileManager+Helper.h */; };
+		AA97381524CEF6CB00E35880 /* NSFileManager+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA97381324CEF6CB00E35880 /* NSFileManager+Helper.m */; };
 		AAAA2A14246D74BB00262BE1 /* NSAttributedString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */; };
 		AAAA2A15246D74BB00262BE1 /* NSAttributedString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA2A13246D74BB00262BE1 /* NSAttributedString+Ext.m */; };
 		B03AEA5247C2DC8A79C373BD567F44BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -170,6 +172,8 @@
 		A7310B756CF21A7BD1572F5A2F76A0F9 /* NSObject+HRNSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HRNSwizzling.h"; path = "Categorys/Classes/NSObject+HRNSwizzling.h"; sourceTree = "<group>"; };
 		A9F97B341A8BA382823CB16F555E7E81 /* Pods-Categorys_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Categorys_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A9FFF192CAA3B3B99CCA91FC973F1BF0 /* SafeNSObject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SafeNSObject-umbrella.h"; sourceTree = "<group>"; };
+		AA97381224CEF6CA00E35880 /* NSFileManager+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Helper.h"; sourceTree = "<group>"; };
+		AA97381324CEF6CB00E35880 /* NSFileManager+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Helper.m"; sourceTree = "<group>"; };
 		AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+Ext.h"; path = "Categorys/Classes/NSAttributedString+Ext.h"; sourceTree = "<group>"; };
 		AAAA2A13246D74BB00262BE1 /* NSAttributedString+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+Ext.m"; path = "Categorys/Classes/NSAttributedString+Ext.m"; sourceTree = "<group>"; };
 		ABC80C084EFAC105CEF3727D0C31A3C5 /* Categorys.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Categorys.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -238,6 +242,8 @@
 		0F4E0843D2E60923B3BADFB3B81A9DBA /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				AA97381224CEF6CA00E35880 /* NSFileManager+Helper.h */,
+				AA97381324CEF6CB00E35880 /* NSFileManager+Helper.m */,
 				4898433F12D054CA73BC7B96FA8FD587 /* CQWeakProxy.h */,
 				E750CB63035D557B7C2A1BAB5959AACB /* CQWeakProxy.m */,
 				1098266F3BB3A07C3CA45DEBA741AD8B /* Foundation+Log.m */,
@@ -489,6 +495,7 @@
 				CED18AFDA6564B20670904AF9C45C985 /* NSObject+NotNull.h in Headers */,
 				2CEEC059EB554A5DEAF9B78E717D3E68 /* NSObject+NSDeallocBlockExecutor.h in Headers */,
 				EE947CF622198EB87534DEC0C1079368 /* NSObject+Observer.h in Headers */,
+				AA97381424CEF6CB00E35880 /* NSFileManager+Helper.h in Headers */,
 				BDC82EDE163F7DE2C7DB3AE27BE9F511 /* NSObject+PerformIfResponds.h in Headers */,
 				007DE81B04E6B518F6E36B0B8EE86E6D /* UIControl+Block.h in Headers */,
 				083004132014530E5610B7F557A59FBC /* UIControl+click.h in Headers */,
@@ -685,6 +692,7 @@
 				0C50CEE93EF04353DCC350444B5510C4 /* CQWeakProxy.m in Sources */,
 				E944C9105F829D46D5065DB5CCA6E250 /* Foundation+Log.m in Sources */,
 				3DCB273E3B00E7DCAC41E267CA7B2BFE /* NSDeallocBlockExecutor.m in Sources */,
+				AA97381524CEF6CB00E35880 /* NSFileManager+Helper.m in Sources */,
 				DF59878AD88B5206BA607DD8AC710CB9 /* NSMutableArray+weak.m in Sources */,
 				97D0FF8C6818177DE109E47BF8F7EC65 /* NSObject+AssociatedObject.m in Sources */,
 				EDD38404F9CE545A83284A6C3E94F5FB /* NSObject+Block.m in Sources */,

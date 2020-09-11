@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)snapshot;
 
+- (CAGradientLayer *)addGradientBorderWithLineWidth: (CGFloat)lineWidth colors: (NSArray<UIColor *> *)colors cornerRadius: (CGFloat)radius;
+
 @end
 
 NS_ASSUME_NONNULL_END

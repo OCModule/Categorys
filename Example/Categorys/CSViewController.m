@@ -15,6 +15,7 @@
 #import "UIView+CSTest1.h"
 #import "UIView+CSTest2.h"
 #import "NSObject+AssociatedObject.h"
+#import <Categorys/UIView+Extend.h>
 
 
 @interface CSViewController ()
@@ -40,6 +41,7 @@
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitle:@"repeat click" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [button addGradientBorderWithLineWidth:4 colors: @[UIColor.blueColor, UIColor.redColor] cornerRadius:8];
     [self.view addSubview:button];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 60, 44)];
@@ -48,6 +50,7 @@
     [button1 setTitle:@"click 22" forState:UIControlStateNormal];
     [button1 addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     button1.isIgnoreEvent = YES;
+
 //    [self.view addSubview:button1];
 
 //    [[NSObject new] perform:^{
