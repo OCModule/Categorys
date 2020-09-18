@@ -49,6 +49,8 @@
 		A3AF8466264A64F186F2A8BF57F3C84F /* Categorys-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041E5F9C046F104691FD762E190FDAF /* Categorys-dummy.m */; };
 		A4EA60950098614231645432AF7AF5FC /* SafeNSObject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D00CC41D68766B2EB1C5AE4EA37D9 /* SafeNSObject-dummy.m */; };
 		A7ECFCCBE4795325CC5210913433FA2C /* Categorys-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F7905E5F536626B59760BF5EB15AE4 /* Categorys-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA48FA2F2514483B0099B12B /* NSThread+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA48FA2D2514483B0099B12B /* NSThread+Helper.h */; };
+		AA48FA302514483B0099B12B /* NSThread+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA48FA2E2514483B0099B12B /* NSThread+Helper.m */; };
 		AA97381424CEF6CB00E35880 /* NSFileManager+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA97381224CEF6CA00E35880 /* NSFileManager+Helper.h */; };
 		AA97381524CEF6CB00E35880 /* NSFileManager+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA97381324CEF6CB00E35880 /* NSFileManager+Helper.m */; };
 		AAAA2A14246D74BB00262BE1 /* NSAttributedString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */; };
@@ -172,6 +174,8 @@
 		A7310B756CF21A7BD1572F5A2F76A0F9 /* NSObject+HRNSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HRNSwizzling.h"; path = "Categorys/Classes/NSObject+HRNSwizzling.h"; sourceTree = "<group>"; };
 		A9F97B341A8BA382823CB16F555E7E81 /* Pods-Categorys_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Categorys_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A9FFF192CAA3B3B99CCA91FC973F1BF0 /* SafeNSObject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SafeNSObject-umbrella.h"; sourceTree = "<group>"; };
+		AA48FA2D2514483B0099B12B /* NSThread+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSThread+Helper.h"; path = "Categorys/Classes/NSThread+Helper.h"; sourceTree = "<group>"; };
+		AA48FA2E2514483B0099B12B /* NSThread+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSThread+Helper.m"; path = "Categorys/Classes/NSThread+Helper.m"; sourceTree = "<group>"; };
 		AA97381224CEF6CA00E35880 /* NSFileManager+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Helper.h"; sourceTree = "<group>"; };
 		AA97381324CEF6CB00E35880 /* NSFileManager+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Helper.m"; sourceTree = "<group>"; };
 		AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+Ext.h"; path = "Categorys/Classes/NSAttributedString+Ext.h"; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				7C059EAB2EA8EEF33C5E7888C3815DF7 /* Support Files */,
 				AAAA2A12246D74BB00262BE1 /* NSAttributedString+Ext.h */,
 				AAAA2A13246D74BB00262BE1 /* NSAttributedString+Ext.m */,
+				AA48FA2D2514483B0099B12B /* NSThread+Helper.h */,
+				AA48FA2E2514483B0099B12B /* NSThread+Helper.m */,
 			);
 			name = Categorys;
 			path = ../..;
@@ -488,6 +494,7 @@
 				624C80D63DFBFFBCC6A67CC48ED4536F /* CQWeakProxy.h in Headers */,
 				03F967A1430A51BC12EC9389A8C0D1DF /* NSDeallocBlockExecutor.h in Headers */,
 				F31FF0F18B7B6DD9767E4A0501F285E6 /* NSMutableArray+weak.h in Headers */,
+				AA48FA2F2514483B0099B12B /* NSThread+Helper.h in Headers */,
 				C49CAA749FB5B3B691B890D3CBF5FFD2 /* NSObject+AssociatedObject.h in Headers */,
 				6A85E171B7B9FB82726C04C80105F83F /* NSObject+Block.h in Headers */,
 				224E5D74667117DBF5C9413C6AEFB49A /* NSObject+HRNSwizzling.h in Headers */,
@@ -698,6 +705,7 @@
 				EDD38404F9CE545A83284A6C3E94F5FB /* NSObject+Block.m in Sources */,
 				43831FFD6751F61136C984619516EADD /* NSObject+HRNLog.m in Sources */,
 				CCE4DA0906D4CB6016280B42C09D1B0D /* NSObject+HRNSwizzling.m in Sources */,
+				AA48FA302514483B0099B12B /* NSThread+Helper.m in Sources */,
 				02FD51FC4F47FA96B0917D5848498051 /* NSObject+KVO.m in Sources */,
 				9629CDEF3B3B5CA5DD6097FF8A871410 /* NSObject+NotNull.m in Sources */,
 				F97AACBDF31DF49B1420660E8CFF36CD /* NSObject+NSDeallocBlockExecutor.m in Sources */,
